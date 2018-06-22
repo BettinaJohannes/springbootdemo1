@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    name: springbootjpa
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: springbootjpa@sha256:42f0144bf1d0f96d4e1bad67e75ca5cb0ba5c1f6a30c8e9dfea55499d03c3ed6
+        namespace: myproject
+      name: latest
